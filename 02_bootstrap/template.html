@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Walkthrough</title>
+
+    <!-- default bootstrap: style your page like twitter -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- theme files: used to style over default bootstrap -->
+    <!-- try themes from: https://startbootstrap.com/-->
+    <!-- <link rel="stylesheet" type="text/css" href="theme.css">  -->
+    <!-- <link rel="stylesheet" type="text/css" href="theme2.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="theme3.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="theme4.css"> -->
+
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- animate.css: used to apply quick css animations -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
+
+    <!--our own custom css overrides-->
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- use this style for testing and development purposes only -->
+    <style type="text/css">
+        .container {
+            border: 2px dotted green;
+        }
+
+        .row {
+            border: 1px dotted red;
+        }
+
+        .row [class*='col-'] {
+            border: 2px dotted purple;
+        }
+    </style>
+
+</head>
+
+<!-- <body class="my-body"> -->
+ <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- <div class="container">
+    <div class='row'>
+        <div class="col-xs-12 col-sm-12  col-md-6 col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quia reprehenderit sequi suscipit perferendis fugiat doloribus corrupti necessitatibus soluta quisquam. Porro consectetur distinctio qui, illo officia iste beatae accusantium ducimus.</div>
+        <div class="col-xs-12 col-sm-12  col-md-6 col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quia reprehenderit sequi suscipit perferendis fugiat doloribus corrupti necessitatibus soluta quisquam. Porro consectetur distinctio qui, illo officia iste beatae accusantium ducimus.</div>
+        <div class="col-xs-12 col-sm-12  col-md-6 col-lg-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quia reprehenderit sequi suscipit perferendis fugiat doloribus corrupti necessitatibus soluta quisquam. Porro consectetur distinctio qui, illo officia iste beatae accusantium ducimus.</div>
+
+    </div>
+
+    </div> -->
+    <div class="container">
+        <!--start of row #1  -->
+        <div class='row'>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="jumbotron">
+                    <h1>A Different Kind of Cat<br>
+                        <section class="wow slideInRight" data-wow-duration="4s">
+
+
+                            <small>&#x718A&#x732B</small><span>
+                        <img align="left" src="images/animated-panda-image-0111.gif" class="img-responsive" alt="thumbnail 2">
+                        </span>
+                        </section>
+                    </h1>
+
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Rent A Cat</a></p>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <h1>Cat 101</h1>
+                <marquee behavior="scroll" direction="up" style="height:350px;" scrolldelay="500">1. Chinese call the panda Xiong Mao, meaning Bear Cat. How cool is that? What’s your name? Oh, my name is
+                    Bear Cat.
+                    <br> 2. Pandas don’t just eat bamboo, when they get bored with bamboo they eat other plants and sometimes
+                    even small animals!
+                    <br> 3. Pandas have bad sight and rely mostly on their smell.
+                    <br> 4. There is something called panda pornography. Biologists show pandas in captivity videos of pandas
+                    mating to stimulate them into mating as well.
+                    <br> 5. Pandas are the dumbest animals in the world. They eat bamboo, which has near to zero nutrition.
+                    Also they don’t mate very well. The only reason they are still alive is because of humans. We of course
+                    are the reason they are endangered in the first place.
+                    <br> 6. If pandas are running away from something they kind of strut. For a long time people thought
+                    they were just too stupid to run faster.
+                    <br> 7. Although 99% of their diet is bamboo, a pandas digestive system is designed for meat. Pandas
+                    absorb only 20%-30 % of bamboo nutrients. Other plant eaters such as deer absorb around 80% of the nutrients
+                    in their diet. This means the panda has to eat most of the time it is awake to get enough nutrients to
+                    survive.
+                    <br> 8. The word ‘panda’ comes from the Nepalese word ‘poonya’ which means something like bamboo-eater.
+                    <br> 9. Red pandas are not bears but raccoons.
+
+                </marquee>
+            </div>
+        </div>
+        <!--end of row# 1 -->
+        <!--start of row# 2 col1-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+
+                <div class="thumbnail">
+                    <img src="images/panda1_800x600.jpg" class="img-responsive" alt="thumbnail 2">
+                    <div class="caption">
+                        <h3>Panda in Action</h3>
+                        <p>Pandas don’t have the energy to walk around constantly because of the low nutrition of bamboo. This
+                            is why pandas appear lazy.
+                        </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Yes</a>
+                            <a href="#" class="btn btn-default" role="button">No</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--start of row# 2 col 2 -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+
+                <div class="thumbnail">
+                    <img src="images/panda2_800x600.jpg" class="img-responsive" alt="thumbnail 2">
+                    <div class="caption">
+                        <h3>Panda at Rest</h3>
+                        <p>Pandas can poop up to 40 times a day. The rest of the time is spent eating or sleeping. Sometimes
+                            they eat and poop at the same time.</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Yes</a>
+                            <a href="#" class="btn btn-default" role="button">No</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--end of row #2  -->
+            <!--start of row# 2 col 3-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+
+                <div class="thumbnail">
+                    <img src="images/panda3_800x600.jpg" class="img-responsive" alt="thumbnail 2">
+                    <div class="caption">
+                        <h3>Panda on Date</h3>
+                        <p>Pandas are the dumbest animals in the world. They eat bamboo, which has near to zero nutrition. Also
+                            they don’t mate very well. 
+                        </p>
+                        <p><a href="#" class="btn btn-primary" role="button">Yes</a>
+                            <a href="#" class="btn btn-default" role="button">No</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--end of row #2 col #3 -->
+        </div>
+        <!--end of row #2  -->
+        <!-- you tube videos 16:9 aspect ratio -->
+        <div class='row'>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qDt6xp1Zec0"></iframe>
+                <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qDt6xp1Zec0?autoplay=1&loop=1&playlist=qDt6xp1Zec0"></iframe> -->
+
+            </div>
+        </div>
+        <hr>
+
+        <!--row 4 form  -->
+        <div class='row'>
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="panel panel-default text-muted">
+                    <div class="panel-body">
+                        <!-- FORM WILL GO INSIDE HERE -->
+                        <!-- column for form -->
+                        <!-- full width on xs screen. half the screen on all other sizes-->
+
+                        <legend>Sign Up Here!</legend>
+                        <form>
+                            <div class="form-group">
+                                <label for="name-id">Name</label>
+                                <input name="Name" type="text" class="form-control" id="name-id" placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email-id">Email address</label>
+                                <input name="EMAIL" type="email" class="form-control" id="email-id" placeholder="Email">
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div> -->
+                            <!-- <div class="form-group">
+                                <label for="exampleInputFile">File input</label>
+                                <input type="file" id="exampleInputFile">
+                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"> Check me out 
+                            </label>
+                            -->
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio"
+                                            name="newsletter"
+                                            value="weekly"
+                                            checked="checked">
+                                            Send me weekly newsletters
+                                    </label>
+                                </div>
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio"
+                                                name="newsletter"
+                                                value="never">
+                                        Don't send me newsletters
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">Sign Up</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--end of panel  -->
+
+            <!-- full width on xs screen. half the screen on all other sizes-->
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+                <section class="wow slideInLeft">
+
+
+                    <h1 class='text-primary animated infinite bounce'>Lorem ipsum dolor sit amet, consectetur adipisicing elit?</h1>
+                </section>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate tempora fugit delectus vero inventore
+                    quos dolorum aliquam mollitia, qui nam nostrum optio ratione doloremque quae vel similique. Et, eaque,
+                    ea!
+                </p>
+
+            </div>
+            <!-- end column -->
+            <!-- column for text -->
+        </div>
+        <!--end row 4  -->
+
+        <!--start row 5  -->
+        <div class='row'>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div>
+                    <h3 class="text-center">Opening Hours</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+
+                        <tr>
+                            <td>Monday to Thursday</td>
+                            <td>9am - 5pm</td>
+                        </tr>
+
+                        <tr>
+                            <td>Friday and Saturday</td>
+                            <td>11am - 3am</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday</td>
+                            <td>closed</td>
+                        </tr>
+                    </table>
+                    <table class="table">
+                        ...
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe src="https://goo.gl/aF7BGb" class="responsive-embed"></iframe>
+                </div>
+                <!--actual code -->
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.794502808684!2d103.7852556138594!3d1.2980207621035373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a4fed92dc05%3A0x729440ee2c86a913!2s79+Ayer+Rajah+Crescent%2C+Singapore+139955!5e0!3m2!1sen!2ssg!4v1500106883558" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+            </div>
+
+            <!--rol5 col 3  -->
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h3 class="text-center">Check me out</h3>
+                <ul class="list-group">
+                    <div class="list-group">
+                        <a class="list-group-item" href="tel:+65123456789"><i class="fa fa-phone fa-fw" aria-hidden="true"></i>&nbsp; +65 123 456 789</a>
+                        <a class="list-group-item" href="mailto:healthyboy88@email.com?subject=test&body=this is a test"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>&nbsp; Hello@soon@gmail.com</a>
+                        <a class="list-group-item" href="https://wwww.telegram.com"><i class="fa fa-paper-plane-o fa-fw" aria-hidden="true"></i>&nbsp; https://wwww.telegram.com</a>
+                        <!-- <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; Settings</a> -->
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!--end row 5  -->
+        <div class='row'>
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="example3">
+<h3>Scrolling down... </h3>
+</div> -->
+            <marquee behavior="scroll" direction="up" style="height:200px;" scrolldelay="500">1. Chinese call the panda Xiong Mao, meaning Bear Cat. How cool is that? What’s your name? Oh, my name is Bear
+                Cat.
+                <br> 2. Pandas don’t just eat bamboo, when they get bored with bamboo they eat other plants and sometimes
+                even small animals!
+                <br> 3. Pandas have bad sight and rely mostly on their smell.
+                <br> 4. There is something called panda pornography. Biologists show pandas in captivity videos of pandas
+                mating to stimulate them into mating as well.
+                <br> 5. Pandas are the dumbest animals in the world. They eat bamboo, which has near to zero nutrition. Also
+                they don’t mate very well. The only reason they are still alive is because of humans. We of course are the
+                reason they are endangered in the first place.
+                <br> 6. If pandas are running away from something they kind of strut. For a long time people thought they
+                were just too stupid to run faster.
+                <br> 7. Although 99% of their diet is bamboo, a pandas digestive system is designed for meat. Pandas absorb
+                only 20%-30 % of bamboo nutrients. Other plant eaters such as deer absorb around 80% of the nutrients in
+                their diet. This means the panda has to eat most of the time it is awake to get enough nutrients to survive.
+                <br> 8. The word ‘panda’ comes from the Nepalese word ‘poonya’ which means something like bamboo-eater.
+                <br> 9. Red pandas are not bears but raccoons.
+
+            </marquee>
+        </div>
+    </div>
+    <!--start of row 6  -->
+    <div class='row'>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <footer class="footer">
+                <!-- <div class="text-inline text-center">
+                         <a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true" style="color:green"></i></a>
+                        <a href="#"><i class="fa  fa-instagram fa-2x" aria-hidden="true" style="color:green"></i></a>
+                        <a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true" style="color:green"></i></a>
+                        <a href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true" style="color:green"></i></a>
+                        <a href="#"><i class="fa fa-skype fa-2x" aria-hidden="true" style="color:green"></i></a>  -->
+
+                <ul class="list-inline text-center">
+                    <li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true" style="color:green"></i></a>
+                    </li>
+                    <li> <a href="#"><i class="fa  fa-instagram fa-2x" aria-hidden="true" style="color:green"></i></a>
+                    </li>
+                    <li> <a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true" style="color:green"></i></a>
+                    </li>
+                    <li> <a href="#"><i class="fa fa-skype fa-2x" aria-hidden="true" style="color:green"></i></a>
+                    </li>
+                </ul>
+                <!-- </div> -->
+            </footer>
+        </div>
+    </div>
+    <!--end of row 6  -->
+
+    </div>
+    <!--end of container  -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jquery: used by bootstrap.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- bootstrap js: used to run fancy components like carousel -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- wow.js: used to make animate.css run on view -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
